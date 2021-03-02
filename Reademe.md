@@ -4,7 +4,7 @@ http://localhost:8080/authenticate
 json body 
 
 {
-"username":"javainuse",
+"username":"user1",
 "password":"password"
 }
 
