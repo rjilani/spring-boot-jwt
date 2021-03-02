@@ -1,4 +1,4 @@
-package com.javainuse.service;
+package com.learningservice.service;
 
 import java.util.ArrayList;
 

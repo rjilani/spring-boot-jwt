@@ -1,4 +1,4 @@
-package com.javainuse.model;
+package com.learningservice.model;
 
 import java.io.Serializable;
 

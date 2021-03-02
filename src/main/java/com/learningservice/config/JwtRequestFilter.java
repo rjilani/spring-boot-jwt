@@ -1,4 +1,4 @@
-package com.javainuse.config;
+package com.learningservice.config;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.javainuse.service.JwtUserDetailsService;
+import com.learningservice.service.JwtUserDetailsService;
 
 import io.jsonwebtoken.ExpiredJwtException;
 

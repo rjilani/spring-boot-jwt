@@ -1,4 +1,4 @@
-package com.javainuse.config;
+package com.learningservice.config;
 
 import java.io.Serializable;
 import java.util.Date;
