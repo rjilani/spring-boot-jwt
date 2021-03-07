@@ -2,6 +2,8 @@ package com.learningservice.service;
 
 import java.util.ArrayList;
 
+import com.learningservice.dao.IUserDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,14 +12,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
+	@Autowired
+	private IUserDao userDao;
 
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		if ("user1".equals(username)) {
-			return new User("user1", "$2a$10$slYQmyNdGzTn7ZLBXBChFOC9f6kFjAqPhccnP6DxlWXx2lPk1C3G6",
-					new ArrayList<>());
+	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+		User user = userDao.findUserByname(userName);
+		if (user != null && user.getUsername().equals(userName)) {
+			return user;
 		} else {
-			throw new UsernameNotFoundException("User not found with username: " + username);
+			throw new UsernameNotFoundException("User not found with username: " + userName);
 		}
 	}
 
