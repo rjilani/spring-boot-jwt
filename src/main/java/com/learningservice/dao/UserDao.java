@@ -6,13 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.stereotype.Service;
-
+import org.springframework.stereotype.Repository;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@Service
+@Repository
 public class UserDao implements IUserDao{
 
     private static final Logger log = LoggerFactory.getLogger(UserDao.class);
