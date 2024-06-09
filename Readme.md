@@ -31,7 +31,7 @@ pass bearer token with the jwt string returns by the call above
 
 ## how to do it with curl
 
-## Returns the bearrer token
+## Returns the bearer token
 
 ``` curl -X POST http://localhost:8080/authenticate -H 'Content-Type: application/json' -d '{ "username":"user1", "password":"password"}'  ```
 
